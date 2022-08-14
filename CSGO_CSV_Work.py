@@ -17,7 +17,7 @@ def printTypeAndSkin():
         for row in csv_dict_reader:
             print(row['Type'],row['Skin'])
     read_obj.close()
-printTypeAndSkin()
+#printTypeAndSkin() uncomment when needed to print
 
 with open('CSGOskinsCSV.csv', 'r') as read_obj:   
     csv_dict_reader = DictReader(read_obj)
@@ -39,3 +39,17 @@ read_obj.close()
 #TODO: Function that compares average from one condition to the next, what is the greatest condition jump
 #TODO: Plot the greatest increase in AK prices based on condition. Make sure that the return statements are 
 #working well and that all the data can fit in 1 jupyter notebook.
+
+def averageWWPrice():
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        wellwornSkinPrice=0
+        columnLength=0 
+        for row in csv_dict_reader:
+            if(row['Well-Worn']=='NA'):
+                pass
+            else:
+                wellwornSkinPrice += float(row['Well-Worn'])
+                columnLength+=1
+        print('Average well-worn price is: ' + str(wellwornSkinPrice/columnLength))
+averageWWPrice() #Nice it works
