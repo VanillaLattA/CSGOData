@@ -1,10 +1,10 @@
 Type,Skin,Tier,Case,BattleScarred,Well-Worn,Field-Tested,Minimal Wear,Factory New,ST Battle-Scarred,ST Well-Worn,ST Field-Tested,ST-Minimal Wear,ST Factory New,Release Date,Wear lowest,Wear highest
 AK,Ice Coaled,Classified,Recoil Case,14.81,22.15,26.83,48.7,84.33,26.05,39.72,41.36,85.02,166.05,July/1/2022,0,0.77
-AK,Slate ,Restricted ,Snakebit Case,1.87,1.87,2.19,3.52,8.11,6.52,6.44,7.24,11.78,29.26,May/3/2021,0,1
+AK,Slate ,Restricted ,Snakebite Case,1.87,1.87,2.19,3.52,8.11,6.52,6.44,7.24,11.78,29.26,May/3/2021,0,1
 AK,Asiimov,Covert ,Danger Zone Case,15.91,22,20.46,31,117.69,35.36,42.99,40.87,73.52,303.94,December/6/2018,0.05,0.7
 AK,The Empress,Covert ,Spectrum 2 Case,13.97,15.11,18.16,28.91,71,32.32,36.49,47.29,75,189.77,September/14/2017,0,1
 AK,Legion of Anubis,Covert ,Fracture Case,6.75,8.97,8.19,10.83,17.05,14.52,20.61,19.57,30.24,50.4,August/6/2020,0,0.7
-AK ,Phantom Disruptor,Classified ,Prisma 2 Case,3.7,4.63,4.09,5.49,7.62,9.11,10.79,9.23,13.49,23.41,March/31/2020,0,0.65
+AK,Phantom Disruptor,Classified ,Prisma 2 Case,3.7,4.63,4.09,5.49,7.62,9.11,10.79,9.23,13.49,23.41,March/31/2020,0,0.65
 AK,Nightwish,Covert ,Dreams and Nightsmares Case,9.59,18.16,26.68,53.93,105.11,22.12,34.1,51.76,106.75,292.08,January/20/2022,0,1
 AK,Vulcan,Covert ,Huntsman Weapon Case,38.25,63.23,110.82,237.14,399.49,69.53,113.62,181.03,455.17,845.1,May/1/2014,0,0.9
 AK,Bloodsport,Covert ,Spectrum Case,NA,41.18,42.92,48.76,57.82,NA,79.54,90.58,112.23,149.52,March/15/2017,0,0.45
@@ -34,7 +34,7 @@ AK,Red Laminate,Classified,eSports 2013 Case,20.01,22.96,19.42,29.36,149.78,48.1
 AK,Fire Serpent,Covert ,Operation Bravo Case,316.61,443.36,546.24,821.46,1642.16,717.8,1082.63,1230.79,1972.47,4594.53,September/19/2013,0.06,0.76
 AK,Baroque Purple,Industrial Grade,Canals Collection,1.92,2.04,2.08,3,6.84,NA,NA,NA,NA,NA,November/18/2019,0,1
 AK,Green Lamniate,Mil-Spec,Vertigo Souvenir Package,NA,7.39,5.32,5.61,7.57,NA,NA,NA,NA,NA,September/21/2021,0.02,0.4
-AK ,Black Laminate,Mil-Spec,Vertigo Collection,16.46,14.61,15.55,18.53,92.56,NA,NA,NA,NA,NA,August/14/2013,0.06,0.8
+AK,Black Laminate,Mil-Spec,Vertigo Collection,16.46,14.61,15.55,18.53,92.56,NA,NA,NA,NA,NA,August/14/2013,0.06,0.8
 AK,Jet Set,Classified,The Baggage Collection,80.67,79.86,102.28,138.66,439.76,NA,NA,NA,NA,NA,July/1/2014,0,
 AK,X-Ray,Covert,The Havoc Collection,185.29,302.29,543.39,823.1,1265.05,NA,NA,NA,NA,NA,December/3/2020,0,1
 AK,Jungle Spray,Industrial Grade,The Aztec Collection,3.36,3.53,4.43,9.65,60.94,NA,NA,NA,NA,NA,August/14/2013,0.06,0.8
