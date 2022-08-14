@@ -8,7 +8,7 @@ from csv import DictReader
 # Python program to read CSV file line by line
 # import necessary packages
 import csv
-  
+    
 # Open file 
 with open('CSGOskinsCSV.csv', 'r') as read_obj:   
     csv_dict_reader = DictReader(read_obj)
@@ -17,12 +17,19 @@ with open('CSGOskinsCSV.csv', 'r') as read_obj:
     def printTypeAndSkin():
         for row in csv_dict_reader:
             print(row['Type'],row['Skin'])
-    def average_BS_skinPrice():
+    printTypeAndSkin()
+
+with open('CSGOskinsCSV.csv', 'r') as read_obj:   
+    csv_dict_reader = DictReader(read_obj)
+    #column_names = csv_dict_reader.fieldnames      This reads all the column names
+    def averageBSPrice():
         battlescarredSkinPrice= 0
+        columnLength= 0
         for row in csv_dict_reader:
             if(row['BattleScarred']=='NA'):
                 pass
             else:
                 battlescarredSkinPrice += float(row['BattleScarred'])
-        print(battlescarredSkinPrice)
-    average_BS_skinPrice()
+                columnLength += 1
+        print('Average battle-scarred price is: ' + str(battlescarredSkinPrice/columnLength))
+    averageBSPrice()
