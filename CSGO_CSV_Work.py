@@ -34,3 +34,8 @@ with open('CSGOskinsCSV.csv', 'r') as read_obj:
         print('Average battle-scarred price is: ' + str(battlescarredSkinPrice/columnLength)) 
     averageBSPrice()
 read_obj.close()
+
+#TODO: Function for all other conditions
+#TODO: Function that compares average from one condition to the next, what is the greatest condition jump
+#TODO: Plot the greatest increase in AK prices based on condition. Make sure that the return statements are 
+#working well and that all the data can fit in 1 jupyter notebook.
