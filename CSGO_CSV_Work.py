@@ -53,3 +53,45 @@ def averageWWPrice():
                 columnLength+=1
         print('Average well-worn price is: ' + str(wellwornSkinPrice/columnLength))
 averageWWPrice() #Nice it works
+
+def averageFTPrice():
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageFTSkinPrice= 0
+        columnLength= 0
+        for row in csv_dict_reader:
+            if(row['Field-Tested']=='NA'):
+                pass
+            else:
+                averageFTSkinPrice += float(row['Field-Tested'])
+                columnLength += 1
+        print('Average field-tested price is: ' + str(averageFTSkinPrice/columnLength))
+averageFTPrice()
+
+def averageMWPrice():
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageMWSkinPrice= 0
+        columnLength= 0
+        for row in csv_dict_reader:
+            if(row['Minimal-Wear']== 'NA'):
+                pass
+            else:
+                averageMWSkinPrice += float(row['Minimal-Wear'])
+                columnLength += 1
+        print('Average minimal-wear price is: ' + str(averageMWSkinPrice/columnLength))
+averageMWPrice()
+
+def averageFNPrice():
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageFNSkinPrice= 0
+        columnLength= 0
+        for row in csv_dict_reader:
+            if(row['Factory-New']== 'NA'):
+                pass
+            else:
+                averageFNSkinPrice  += float(row['Factory-New'])
+                columnLength += 1
+        print('Average factory-new price is: ' + str(averageFNSkinPrice/columnLength))
+averageFNPrice()
