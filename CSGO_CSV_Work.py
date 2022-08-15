@@ -95,3 +95,44 @@ def averageFNPrice():
                 columnLength += 1
         print('Average factory-new price is: ' + str(averageFNSkinPrice/columnLength))
 averageFNPrice()
+
+def averageSTBSPrice():
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageSTBSSkinPrice= 0
+        columnLength= 0
+        for row in csv_dict_reader:
+            if(row['ST-Battle-Scarred']== 'NA'):
+                pass
+            else:
+                averageSTBSSkinPrice += float(row['ST-Battle-Scarred'])
+                columnLength +=1
+        print('Average Stattrack Battle-Scarred price is: ' + str(averageSTBSSkinPrice/columnLength))
+averageSTBSPrice()
+
+def averageSTWWPrice():
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageSTWWSkinPrice= 0
+        columnLength= 0
+        for row in csv_dict_reader:
+            if(row['ST-Well-Worn']=='NA'):
+                pass
+            else:
+                averageSTWWSkinPrice += float(row['ST-Well-Worn'])
+                columnLength += 1
+        print('Average Stattrack Well-Worn price is: ' + str(averageSTWWSkinPrice/columnLength))
+averageSTWWPrice()
+
+                
+def averageSTFTPrice(): #These are todo
+    pass
+
+def averageSTMWPrice():
+    pass
+
+def averageSTFNPrice():
+    pass
+    
+
+     
