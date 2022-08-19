@@ -126,13 +126,44 @@ averageSTWWPrice()
 
                 
 def averageSTFTPrice(): #These are todo
-    pass
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageSTFTSkinPrice = 0
+        columnLength = 0
+        for row in csv_dict_reader:
+            if(row['ST-Field-Tested']== 'NA'):
+                pass
+            else:
+                averageSTFTSkinPrice+= float(row['ST-Field-Tested'])
+                columnLength+=1      
+        print('Average Stattrack Field-Tested price is: ' + str(averageSTFTSkinPrice/columnLength))
+averageSTFTPrice()
 
 def averageSTMWPrice():
-    pass
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageSTMWPrice = 0
+        columnLength= 0
+        for row in csv_dict_reader:
+            if(row['ST-Minimal-Wear']=='NA'):
+                pass
+            else:
+                averageSTMWPrice += float(row['ST-Minimal-Wear'])
+                columnLength+= 1
+    print('Average Stattrack Minimal-Wear price is: ' + str(averageSTMWPrice/columnLength))
+averageSTMWPrice()                
 
 def averageSTFNPrice():
-    pass
-    
-
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        averageSTFNPrice= 0
+        columnLength = 0
+        for row in csv_dict_reader:
+            if(row['ST-Factory-New']== 'NA'):
+                pass
+            else:
+                averageSTFNPrice+= float(row['ST-Factory-New'])
+                columnLength+= 1
+        print('Average Stattrack Factory-New price is: ' + str(averageSTFNPrice/columnLength))
+averageSTFNPrice()
      
