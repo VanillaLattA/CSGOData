@@ -31,14 +31,10 @@ with open('CSGOskinsCSV.csv', 'r') as read_obj:
             else:
                 battlescarredSkinPrice += float(row['BattleScarred'])
                 columnLength += 1
-        print('Average battle-scarred price is: ' + str(battlescarredSkinPrice/columnLength)) 
-    averageBSPrice()
-read_obj.close()
+        print('Average battle-scarred price is: ' + str(battlescarredSkinPrice/columnLength))
+        return battlescarredSkinPrice
+    averageBSPrice() #FIX THIS ONE
 
-#TODO: Function for all other conditions
-#TODO: Function that compares average from one condition to the next, what is the greatest condition jump
-#TODO: Plot the greatest increase in AK prices based on condition. Make sure that the return statements are 
-#working well and that all the data can fit in 1 jupyter notebook.
 
 def averageWWPrice():
     with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
@@ -52,7 +48,8 @@ def averageWWPrice():
                 wellwornSkinPrice += float(row['Well-Worn'])
                 columnLength+=1
         print('Average well-worn price is: ' + str(wellwornSkinPrice/columnLength))
-averageWWPrice() #Nice it works
+        return wellwornSkinPrice/columnLength
+averageWWPrice() 
 
 def averageFTPrice():
     with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
@@ -66,6 +63,7 @@ def averageFTPrice():
                 averageFTSkinPrice += float(row['Field-Tested'])
                 columnLength += 1
         print('Average field-tested price is: ' + str(averageFTSkinPrice/columnLength))
+        return averageFTSkinPrice
 averageFTPrice()
 
 def averageMWPrice():
@@ -80,6 +78,7 @@ def averageMWPrice():
                 averageMWSkinPrice += float(row['Minimal-Wear'])
                 columnLength += 1
         print('Average minimal-wear price is: ' + str(averageMWSkinPrice/columnLength))
+        return averageMWSkinPrice
 averageMWPrice()
 
 def averageFNPrice():
@@ -94,6 +93,7 @@ def averageFNPrice():
                 averageFNSkinPrice  += float(row['Factory-New'])
                 columnLength += 1
         print('Average factory-new price is: ' + str(averageFNSkinPrice/columnLength))
+        return averageFNSkinPrice
 averageFNPrice()
 
 def averageSTBSPrice():
@@ -108,6 +108,7 @@ def averageSTBSPrice():
                 averageSTBSSkinPrice += float(row['ST-Battle-Scarred'])
                 columnLength +=1
         print('Average Stattrack Battle-Scarred price is: ' + str(averageSTBSSkinPrice/columnLength))
+        return averageSTBSSkinPrice
 averageSTBSPrice()
 
 def averageSTWWPrice():
@@ -122,6 +123,7 @@ def averageSTWWPrice():
                 averageSTWWSkinPrice += float(row['ST-Well-Worn'])
                 columnLength += 1
         print('Average Stattrack Well-Worn price is: ' + str(averageSTWWSkinPrice/columnLength))
+        return averageSTWWSkinPrice
 averageSTWWPrice()
 
                 
@@ -137,6 +139,7 @@ def averageSTFTPrice(): #These are todo
                 averageSTFTSkinPrice+= float(row['ST-Field-Tested'])
                 columnLength+=1      
         print('Average Stattrack Field-Tested price is: ' + str(averageSTFTSkinPrice/columnLength))
+        return averageSTFTSkinPrice
 averageSTFTPrice()
 
 def averageSTMWPrice():
@@ -151,6 +154,7 @@ def averageSTMWPrice():
                 averageSTMWPrice += float(row['ST-Minimal-Wear'])
                 columnLength+= 1
     print('Average Stattrack Minimal-Wear price is: ' + str(averageSTMWPrice/columnLength))
+    return averageSTMWPrice
 averageSTMWPrice()                
 
 def averageSTFNPrice():
@@ -165,5 +169,15 @@ def averageSTFNPrice():
                 averageSTFNPrice+= float(row['ST-Factory-New'])
                 columnLength+= 1
         print('Average Stattrack Factory-New price is: ' + str(averageSTFNPrice/columnLength))
+        return averageSTFNPrice
+    
 averageSTFNPrice()
-     
+
+#TODO: Function that compares average from one condition to the next, what is the greatest condition jump
+#TODO: Plot the greatest increase in AK prices based on condition. Make sure that the return statements are 
+#working well and that all the data can fit in 1 jupyter notebook.
+
+def printAvgPrices(): #this will replace all the pring statements 
+    wellworn = averageWWPrice()
+    print(wellworn)
+printAvgPrices()
