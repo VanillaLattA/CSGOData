@@ -19,22 +19,21 @@ def printTypeAndSkin():
     read_obj.close()
 #printTypeAndSkin() uncomment when needed to print
 
-with open('CSGOskinsCSV.csv', 'r') as read_obj:   
-    csv_dict_reader = DictReader(read_obj)
-    #column_names = csv_dict_reader.fieldnames      This reads all the column names
-    def averageBSPrice():
-        battlescarredSkinPrice= 0
-        columnLength= 0
+
+def averageBSPrice():
+    with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
+        csv_dict_reader = DictReader(read_obj)
+        battlescarredSkinPrice = 0
+        columnLength = 0
         for row in csv_dict_reader:
             if(row['BattleScarred']=='NA'):
                 pass
             else:
-                battlescarredSkinPrice += float(row['BattleScarred'])
-                columnLength += 1
+                battlescarredSkinPrice +=float(row['BattleScarred'])
+                columnLength +=1
         print('Average battle-scarred price is: ' + str(battlescarredSkinPrice/columnLength))
-        return battlescarredSkinPrice
-    averageBSPrice() #FIX THIS ONE
-
+        return battlescarredSkinPrice/columnLength
+averageBSPrice() 
 
 def averageWWPrice():
     with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
