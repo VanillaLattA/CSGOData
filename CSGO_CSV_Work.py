@@ -31,7 +31,6 @@ def averageBSPrice():
             else:
                 battlescarredSkinPrice +=float(row['BattleScarred'])
                 columnLength +=1
-        print('Average battle-scarred price is: ' + str(battlescarredSkinPrice/columnLength))
         return battlescarredSkinPrice/columnLength
 averageBSPrice() 
 
@@ -46,7 +45,6 @@ def averageWWPrice():
             else:
                 wellwornSkinPrice += float(row['Well-Worn'])
                 columnLength+=1
-        print('Average well-worn price is: ' + str(wellwornSkinPrice/columnLength))
         return wellwornSkinPrice/columnLength
 averageWWPrice() 
 
@@ -61,7 +59,6 @@ def averageFTPrice():
             else:
                 averageFTSkinPrice += float(row['Field-Tested'])
                 columnLength += 1
-        print('Average field-tested price is: ' + str(averageFTSkinPrice/columnLength))
         return averageFTSkinPrice
 averageFTPrice()
 
@@ -76,7 +73,6 @@ def averageMWPrice():
             else:
                 averageMWSkinPrice += float(row['Minimal-Wear'])
                 columnLength += 1
-        print('Average minimal-wear price is: ' + str(averageMWSkinPrice/columnLength))
         return averageMWSkinPrice
 averageMWPrice()
 
@@ -91,7 +87,6 @@ def averageFNPrice():
             else:
                 averageFNSkinPrice  += float(row['Factory-New'])
                 columnLength += 1
-        print('Average factory-new price is: ' + str(averageFNSkinPrice/columnLength))
         return averageFNSkinPrice
 averageFNPrice()
 
@@ -106,7 +101,6 @@ def averageSTBSPrice():
             else:
                 averageSTBSSkinPrice += float(row['ST-Battle-Scarred'])
                 columnLength +=1
-        print('Average Stattrack Battle-Scarred price is: ' + str(averageSTBSSkinPrice/columnLength))
         return averageSTBSSkinPrice
 averageSTBSPrice()
 
@@ -121,7 +115,6 @@ def averageSTWWPrice():
             else:
                 averageSTWWSkinPrice += float(row['ST-Well-Worn'])
                 columnLength += 1
-        print('Average Stattrack Well-Worn price is: ' + str(averageSTWWSkinPrice/columnLength))
         return averageSTWWSkinPrice
 averageSTWWPrice()
 
@@ -137,9 +130,7 @@ def averageSTFTPrice(): #These are todo
             else:
                 averageSTFTSkinPrice+= float(row['ST-Field-Tested'])
                 columnLength+=1      
-        print('Average Stattrack Field-Tested price is: ' + str(averageSTFTSkinPrice/columnLength))
         return averageSTFTSkinPrice
-averageSTFTPrice()
 
 def averageSTMWPrice():
     with open('CSGOskinsCSV.csv', 'r') as read_obj: #add these two lines whenever iterating 
@@ -152,7 +143,6 @@ def averageSTMWPrice():
             else:
                 averageSTMWPrice += float(row['ST-Minimal-Wear'])
                 columnLength+= 1
-    print('Average Stattrack Minimal-Wear price is: ' + str(averageSTMWPrice/columnLength))
     return averageSTMWPrice
 averageSTMWPrice()                
 
@@ -167,7 +157,6 @@ def averageSTFNPrice():
             else:
                 averageSTFNPrice+= float(row['ST-Factory-New'])
                 columnLength+= 1
-        print('Average Stattrack Factory-New price is: ' + str(averageSTFNPrice/columnLength))
         return averageSTFNPrice
     
 averageSTFNPrice()
@@ -177,6 +166,25 @@ averageSTFNPrice()
 #working well and that all the data can fit in 1 jupyter notebook.
 
 def printAvgPrices(): #this will replace all the pring statements 
+    battlescarred= averageBSPrice()
+    print(battlescarred)
     wellworn = averageWWPrice()
     print(wellworn)
+    fieldtested = averageFTPrice()
+    print(fieldtested)
+    minimalwear = averageMWPrice()
+    print(minimalwear)
+    factorynew= averageFNPrice()
+    print(factorynew)
+    stbattlescarred= averageSTBSPrice()
+    print(stbattlescarred)
+    stwellworn =averageSTWWPrice()
+    print(stwellworn)
+    stfieldtested= averageSTFTPrice()
+    print(stfieldtested)
+    stminimalwear= averageSTMWPrice()
+    print(stminimalwear)
+    stfactorynew= averageSTFNPrice()
+    print(stfactorynew)
+    
 printAvgPrices()
