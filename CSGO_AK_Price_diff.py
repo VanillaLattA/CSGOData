@@ -162,6 +162,17 @@ def averageSTFNPrice():
 averageSTFNPrice()
 
 #here let us get the variations from each other of the statistics
+battlescarred= averageBSPrice()
+wellworn = averageWWPrice()
+fieldtested = averageFTPrice() 
+minimalwear = averageMWPrice()    
+factorynew= averageFNPrice()   
+stbattlescarred= averageSTBSPrice()
+stwellworn =averageSTWWPrice()    
+stfieldtested= averageSTFTPrice()  
+stminimalwear= averageSTMWPrice()
+stfactorynew= averageSTFNPrice()
+
 def percentageDifference():
     #this function calculates the percentage difference between 
     #each condition and the stat track and non-stattrack
@@ -177,5 +188,12 @@ def percentageDifference():
     #now we need to create the difference between two variants
     prices= [98.00, 133.41, 175.33, 248.25, 368.74, 56.71, 77.53, 88.94, 151.20, 373.75]
     print("The difference between BS and WW is ", abs((wellworn-battlescarred)/wellworn)*100, "%")
-    
+    print("The difference between FT and WW is ", abs((fieldtested-wellworn)/fieldtested)*100, "%")
+    print("The difference between MW and FT is ", abs((minimalwear-fieldtested)/minimalwear)*100, "%")
+    print("The difference between FN and MW is ", abs((factorynew-minimalwear)/factorynew)*100, "%")
+    print("\n")
+    print("The difference between STBS and STWW is ", abs((stwellworn-stbattlescarred)/stwellworn)*100, "%")
+    print("The difference between STFT and STWW is ", abs((stfieldtested-stwellworn)/stfieldtested)*100, "%")
+    print("The difference between STMW and STFT is ", abs((stminimalwear-stfieldtested)/stminimalwear)*100, "%")
+    print("The difference between STFN and STMW is ", abs((stfactorynew-stminimalwear)/stfactorynew)*100, "%")
 percentageDifference()
